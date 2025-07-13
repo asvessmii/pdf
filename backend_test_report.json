@@ -1,89 +1,95 @@
 {
   "test_summary": {
-    "total_tests": 13,
-    "passed": 11,
-    "failed": 2,
-    "success_rate": 84.61538461538461,
-    "timestamp": "2025-07-13T21:00:49.880655"
+    "total_tests": 14,
+    "passed": 13,
+    "failed": 1,
+    "success_rate": 92.85714285714286,
+    "timestamp": "2025-07-13T21:03:17.024586"
   },
   "test_results": [
     {
       "name": "Root Endpoint",
       "success": false,
       "details": "Status: 404, Response: {\"message\": \"Endpoint not found\"}...",
-      "timestamp": "2025-07-13T21:00:14.362558"
+      "timestamp": "2025-07-13T21:03:10.424448"
     },
     {
       "name": "Bot Status",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"running\", \"message\": \"Telegram бот запущен\"}...",
-      "timestamp": "2025-07-13T21:00:22.706921"
+      "timestamp": "2025-07-13T21:03:10.443809"
     },
     {
       "name": "Health Check",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
-      "timestamp": "2025-07-13T21:00:22.771501"
+      "timestamp": "2025-07-13T21:03:10.470828"
     },
     {
       "name": "Users Count",
       "success": true,
-      "details": "Status: 200, Response: {\"total_users\": 1}...",
-      "timestamp": "2025-07-13T21:00:25.139761"
+      "details": "Status: 200, Response: {\"total_users\": 3}...",
+      "timestamp": "2025-07-13T21:03:10.489433"
     },
     {
       "name": "Test Results Count",
       "success": true,
-      "details": "Status: 200, Response: {\"total_tests\": 1}...",
-      "timestamp": "2025-07-13T21:00:32.204756"
+      "details": "Status: 200, Response: {\"total_tests\": 3}...",
+      "timestamp": "2025-07-13T21:03:10.509768"
     },
     {
       "name": "Users List",
       "success": true,
-      "details": "Status: 200, Response: {\"users\": [{\"user_id\": \"7470811680\", \"created_at\": \"2025-07-13T20:59:00.692000\", \"first_name\": \"Artem\", \"last_name\": null, \"test_completed\": true, \"username\": \"qwer1yy1rewq\", \"last_test_score\": 140}]}...",
-      "timestamp": "2025-07-13T21:00:32.249495"
+      "details": "Status: 200, Response: {\"users\": [{\"user_id\": \"7470811680\", \"created_at\": \"2025-07-13T20:59:00.692000\", \"first_name\": \"Artem\", \"last_name\": null, \"test_completed\": true, \"username\": \"qwer1yy1rewq\", \"last_test_score\": 140}, ...",
+      "timestamp": "2025-07-13T21:03:10.526362"
     },
     {
       "name": "Test Results List",
       "success": true,
       "details": "Status: 200, Response: {\"test_results\": [{\"user_id\": \"7470811680\", \"test_id\": \"fcaeeb29-83c0-4154-a2e8-0e06c0850c4e\", \"answers\": [{\"question_index\": 0, \"answer_index\": 0, \"answer_text\": \"до 30\", \"score\": 20}, {\"question_ind...",
-      "timestamp": "2025-07-13T21:00:32.266104"
+      "timestamp": "2025-07-13T21:03:16.930792"
     },
     {
       "name": "MongoDB Connection via Health",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
-      "timestamp": "2025-07-13T21:00:32.302619"
+      "timestamp": "2025-07-13T21:03:16.969418"
     },
     {
       "name": "MongoDB Connection Status",
       "success": true,
       "details": "Status: connected",
-      "timestamp": "2025-07-13T21:00:32.302926"
+      "timestamp": "2025-07-13T21:03:16.969686"
     },
     {
       "name": "Telegram Bot Status via Health",
-      "success": false,
-      "details": "Request failed: HTTPSConnectionPool(host='0640a618-affb-403d-8017-1887685ee433.preview.emergentagent.com', port=443): Read timed out. (read timeout=10)",
-      "timestamp": "2025-07-13T21:00:42.325658"
+      "success": true,
+      "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
+      "timestamp": "2025-07-13T21:03:16.987722"
+    },
+    {
+      "name": "Telegram Bot Status",
+      "success": true,
+      "details": "Status: running",
+      "timestamp": "2025-07-13T21:03:16.987956"
     },
     {
       "name": "File Existence: anna_photo.jpg",
       "success": true,
       "details": "File exists, size: 205161 bytes",
-      "timestamp": "2025-07-13T21:00:42.325744"
+      "timestamp": "2025-07-13T21:03:16.988013"
     },
     {
       "name": "File Existence: Кето Анна Герц.pdf",
       "success": true,
       "details": "File exists, size: 6529730 bytes",
-      "timestamp": "2025-07-13T21:00:42.325765"
+      "timestamp": "2025-07-13T21:03:16.988036"
     },
     {
       "name": "404 Error Handling",
       "success": true,
       "details": "Status: 404, Response: {\"message\": \"Endpoint not found\"}...",
-      "timestamp": "2025-07-13T21:00:49.880359"
+      "timestamp": "2025-07-13T21:03:17.024288"
     }
   ],
   "base_url": "https://0640a618-affb-403d-8017-1887685ee433.preview.emergentagent.com",
