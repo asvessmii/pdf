@@ -216,7 +216,8 @@ class TelegramBot:
             # Если фото не загрузилось, отправляем текст
             await update.message.reply_text(welcome_text)
         
-        # Сразу отправляем второе сообщение о подписке
+        # Ждем 5 секунд перед отправкой второго сообщения
+        await asyncio.sleep(5)
         await self.send_subscription_check(update, context)
         
     async def send_subscription_check(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
