@@ -28,8 +28,8 @@ def test_subscription_logic():
         return False
     
     # Проверяем что в случае ошибки НЕ вызывается send_test_invitation
-    pattern = r'except Exception.*?await self\.send_test_invitation'
-    if re.search(pattern, content, re.DOTALL):
+    except_block = re.search(r'except Exception.*?(?=async def|\Z)', content, re.DOTALL)
+    if except_block and 'await self.send_test_invitation' in except_block.group():
         print("❌ В случае ошибки всё ещё вызывается send_test_invitation")
         return False
     else:
