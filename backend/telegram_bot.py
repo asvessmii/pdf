@@ -268,12 +268,16 @@ class TelegramBot:
                 
         except Exception as e:
             logger.error(f"Ошибка при проверке подписки для пользователя {username} (ID: {user_id}): {e}")
-            # В случае ошибки (например, бот не администратор канала) - временно пропускаем
+            # В случае ошибки (например, бот не администратор канала) - считаем что подписки нет
+            logger.info(f"Пользователь {username} (ID: {user_id}) - подписка не найдена (ошибка проверки)")
             await query.edit_message_text(
-                "Сейчас не могу проверить подписку, но это не страшно! 😊\n"
-                "Проходи к тесту ⬇️"
+                "Не увидел подписку на канал 🤔\n\n"
+                "Подпишись на канал и попробуй еще раз ⬇️",
+                reply_markup=InlineKeyboardMarkup([
+                    [InlineKeyboardButton("Подписаться на канал", url=CHANNEL_URL)],
+                    [InlineKeyboardButton("Проверка подписки", callback_data="check_subscription")]
+                ])
             )
-            await self.send_test_invitation(query, context)
             
     async def send_test_invitation(self, query_or_update, context: ContextTypes.DEFAULT_TYPE):
         """Отправка приглашения к тесту"""
