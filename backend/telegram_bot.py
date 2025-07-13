@@ -239,19 +239,41 @@ class TelegramBot:
         await update.message.reply_text(subscription_text, reply_markup=reply_markup)
         
     async def check_subscription(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Проверка подписки на канал (временно отключена)"""
+        """Проверка подписки на канал"""
         query = update.callback_query
         await query.answer()
         
         user_id = query.from_user.id
         username = query.from_user.username or query.from_user.first_name
         
-        logger.info(f"Пропускаем проверку подписки для пользователя {username} (ID: {user_id})")
-        
-        # ВРЕМЕННО: пропускаем всех пользователей без проверки подписки
-        # После добавления бота как администратора канала - включить проверку
-        await query.edit_message_text("Вижу подписку 💗")
-        await self.send_test_invitation(query, context)
+        try:
+            # Проверяем подписку пользователя на канал
+            member = await context.bot.get_chat_member(chat_id=CHANNEL_USERNAME, user_id=user_id)
+            
+            # Проверяем статус участника
+            if member.status in ['member', 'administrator', 'creator']:
+                logger.info(f"Пользователь {username} (ID: {user_id}) подписан на канал")
+                await query.edit_message_text("Вижу подписку 💗")
+                await self.send_test_invitation(query, context)
+            else:
+                logger.info(f"Пользователь {username} (ID: {user_id}) НЕ подписан на канал")
+                await query.edit_message_text(
+                    "Кажется, ты еще не подписалась на канал 🤔\n\n"
+                    "Подпишись на канал и нажми кнопку еще раз ⬇️",
+                    reply_markup=InlineKeyboardMarkup([
+                        [InlineKeyboardButton("Подписаться на канал", url=CHANNEL_URL)],
+                        [InlineKeyboardButton("Проверка подписки", callback_data="check_subscription")]
+                    ])
+                )
+                
+        except Exception as e:
+            logger.error(f"Ошибка при проверке подписки для пользователя {username} (ID: {user_id}): {e}")
+            # В случае ошибки (например, бот не администратор канала) - временно пропускаем
+            await query.edit_message_text(
+                "Сейчас не могу проверить подписку, но это не страшно! 😊\n"
+                "Проходи к тесту ⬇️"
+            )
+            await self.send_test_invitation(query, context)
             
     async def send_test_invitation(self, query_or_update, context: ContextTypes.DEFAULT_TYPE):
         """Отправка приглашения к тесту"""
