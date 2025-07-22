@@ -4,92 +4,92 @@
     "passed": 13,
     "failed": 1,
     "success_rate": 92.85714285714286,
-    "timestamp": "2025-07-22T18:56:46.132195"
+    "timestamp": "2025-07-22T18:57:57.590096"
   },
   "test_results": [
     {
       "name": "Root Endpoint",
       "success": false,
       "details": "Status: 404, Response: {\"message\": \"Endpoint not found\"}...",
-      "timestamp": "2025-07-22T18:56:46.108457"
+      "timestamp": "2025-07-22T18:57:57.562866"
     },
     {
       "name": "Bot Status",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"running\", \"message\": \"Telegram бот запущен\"}...",
-      "timestamp": "2025-07-22T18:56:46.110903"
+      "timestamp": "2025-07-22T18:57:57.565346"
     },
     {
       "name": "Health Check",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
-      "timestamp": "2025-07-22T18:56:46.113769"
+      "timestamp": "2025-07-22T18:57:57.568476"
     },
     {
       "name": "Users Count",
       "success": true,
       "details": "Status: 200, Response: {\"total_users\": 1}...",
-      "timestamp": "2025-07-22T18:56:46.116870"
+      "timestamp": "2025-07-22T18:57:57.571907"
     },
     {
       "name": "Test Results Count",
       "success": true,
       "details": "Status: 200, Response: {\"total_tests\": 1}...",
-      "timestamp": "2025-07-22T18:56:46.119693"
+      "timestamp": "2025-07-22T18:57:57.575262"
     },
     {
       "name": "Users List",
       "success": true,
       "details": "Status: 200, Response: {\"users\": [{\"user_id\": \"5269189109\", \"created_at\": \"2025-07-22T18:54:37.607000\", \"first_name\": \"Анна\", \"is_new_user\": true, \"last_name\": null, \"new_messages_sent\": true, \"test_completed\": true, \"usern...",
-      "timestamp": "2025-07-22T18:56:46.122485"
+      "timestamp": "2025-07-22T18:57:57.578556"
     },
     {
       "name": "Test Results List",
       "success": true,
       "details": "Status: 200, Response: {\"test_results\": [{\"user_id\": \"5269189109\", \"test_id\": \"71404a19-30a4-446d-95b7-0f1a0a655d1d\", \"answers\": [{\"question_index\": 0, \"answer_index\": 0, \"answer_text\": \"до 30\", \"score\": 20}, {\"question_ind...",
-      "timestamp": "2025-07-22T18:56:46.125290"
+      "timestamp": "2025-07-22T18:57:57.581786"
     },
     {
       "name": "MongoDB Connection via Health",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
-      "timestamp": "2025-07-22T18:56:46.127791"
+      "timestamp": "2025-07-22T18:57:57.584939"
     },
     {
       "name": "MongoDB Connection Status",
       "success": true,
       "details": "Status: connected",
-      "timestamp": "2025-07-22T18:56:46.127891"
+      "timestamp": "2025-07-22T18:57:57.585076"
     },
     {
       "name": "Telegram Bot Status via Health",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
-      "timestamp": "2025-07-22T18:56:46.130102"
+      "timestamp": "2025-07-22T18:57:57.587682"
     },
     {
       "name": "Telegram Bot Status",
       "success": true,
       "details": "Status: running",
-      "timestamp": "2025-07-22T18:56:46.130196"
+      "timestamp": "2025-07-22T18:57:57.587782"
     },
     {
       "name": "File Existence: anna_photo.jpg",
       "success": true,
       "details": "File exists, size: 205161 bytes",
-      "timestamp": "2025-07-22T18:56:46.130250"
+      "timestamp": "2025-07-22T18:57:57.587840"
     },
     {
       "name": "File Existence: Кето Анна Герц.pdf",
       "success": true,
       "details": "File exists, size: 6529730 bytes",
-      "timestamp": "2025-07-22T18:56:46.130273"
+      "timestamp": "2025-07-22T18:57:57.587860"
     },
     {
       "name": "404 Error Handling",
       "success": true,
       "details": "Status: 404, Response: {\"message\": \"Endpoint not found\"}...",
-      "timestamp": "2025-07-22T18:56:46.132079"
+      "timestamp": "2025-07-22T18:57:57.589953"
     }
   ],
   "base_url": "http://localhost:8001",
