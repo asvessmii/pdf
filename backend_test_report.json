@@ -1,95 +1,95 @@
 {
   "test_summary": {
     "total_tests": 14,
-    "passed": 13,
-    "failed": 1,
-    "success_rate": 92.85714285714286,
-    "timestamp": "2025-07-22T18:57:57.590096"
+    "passed": 14,
+    "failed": 0,
+    "success_rate": 100.0,
+    "timestamp": "2025-07-22T18:58:26.919954"
   },
   "test_results": [
     {
       "name": "Root Endpoint",
-      "success": false,
-      "details": "Status: 404, Response: {\"message\": \"Endpoint not found\"}...",
-      "timestamp": "2025-07-22T18:57:57.562866"
+      "success": true,
+      "details": "Status: 200, Response: {\"message\": \"Anna Hertz Telegram Bot API is running\"}...",
+      "timestamp": "2025-07-22T18:58:26.897645"
     },
     {
       "name": "Bot Status",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"running\", \"message\": \"Telegram бот запущен\"}...",
-      "timestamp": "2025-07-22T18:57:57.565346"
+      "timestamp": "2025-07-22T18:58:26.899865"
     },
     {
       "name": "Health Check",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
-      "timestamp": "2025-07-22T18:57:57.568476"
+      "timestamp": "2025-07-22T18:58:26.902585"
     },
     {
       "name": "Users Count",
       "success": true,
       "details": "Status: 200, Response: {\"total_users\": 1}...",
-      "timestamp": "2025-07-22T18:57:57.571907"
+      "timestamp": "2025-07-22T18:58:26.905303"
     },
     {
       "name": "Test Results Count",
       "success": true,
       "details": "Status: 200, Response: {\"total_tests\": 1}...",
-      "timestamp": "2025-07-22T18:57:57.575262"
+      "timestamp": "2025-07-22T18:58:26.907909"
     },
     {
       "name": "Users List",
       "success": true,
       "details": "Status: 200, Response: {\"users\": [{\"user_id\": \"5269189109\", \"created_at\": \"2025-07-22T18:54:37.607000\", \"first_name\": \"Анна\", \"is_new_user\": true, \"last_name\": null, \"new_messages_sent\": true, \"test_completed\": true, \"usern...",
-      "timestamp": "2025-07-22T18:57:57.578556"
+      "timestamp": "2025-07-22T18:58:26.910592"
     },
     {
       "name": "Test Results List",
       "success": true,
       "details": "Status: 200, Response: {\"test_results\": [{\"user_id\": \"5269189109\", \"test_id\": \"71404a19-30a4-446d-95b7-0f1a0a655d1d\", \"answers\": [{\"question_index\": 0, \"answer_index\": 0, \"answer_text\": \"до 30\", \"score\": 20}, {\"question_ind...",
-      "timestamp": "2025-07-22T18:57:57.581786"
+      "timestamp": "2025-07-22T18:58:26.913227"
     },
     {
       "name": "MongoDB Connection via Health",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
-      "timestamp": "2025-07-22T18:57:57.584939"
+      "timestamp": "2025-07-22T18:58:26.915666"
     },
     {
       "name": "MongoDB Connection Status",
       "success": true,
       "details": "Status: connected",
-      "timestamp": "2025-07-22T18:57:57.585076"
+      "timestamp": "2025-07-22T18:58:26.915765"
     },
     {
       "name": "Telegram Bot Status via Health",
       "success": true,
       "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
-      "timestamp": "2025-07-22T18:57:57.587682"
+      "timestamp": "2025-07-22T18:58:26.917923"
     },
     {
       "name": "Telegram Bot Status",
       "success": true,
       "details": "Status: running",
-      "timestamp": "2025-07-22T18:57:57.587782"
+      "timestamp": "2025-07-22T18:58:26.918016"
     },
     {
       "name": "File Existence: anna_photo.jpg",
       "success": true,
       "details": "File exists, size: 205161 bytes",
-      "timestamp": "2025-07-22T18:57:57.587840"
+      "timestamp": "2025-07-22T18:58:26.918089"
     },
     {
       "name": "File Existence: Кето Анна Герц.pdf",
       "success": true,
       "details": "File exists, size: 6529730 bytes",
-      "timestamp": "2025-07-22T18:57:57.587860"
+      "timestamp": "2025-07-22T18:58:26.918111"
     },
     {
       "name": "404 Error Handling",
       "success": true,
       "details": "Status: 404, Response: {\"message\": \"Endpoint not found\"}...",
-      "timestamp": "2025-07-22T18:57:57.589953"
+      "timestamp": "2025-07-22T18:58:26.919843"
     }
   ],
   "base_url": "http://localhost:8001",
