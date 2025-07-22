@@ -1,0 +1,85 @@
+{
+  "test_summary": {
+    "total_tests": 12,
+    "passed": 1,
+    "failed": 11,
+    "success_rate": 8.333333333333332,
+    "timestamp": "2025-07-22T18:53:04.457108"
+  },
+  "test_results": [
+    {
+      "name": "Root Endpoint",
+      "success": false,
+      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
+      "timestamp": "2025-07-22T18:53:04.286932"
+    },
+    {
+      "name": "Bot Status",
+      "success": false,
+      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
+      "timestamp": "2025-07-22T18:53:04.308610"
+    },
+    {
+      "name": "Health Check",
+      "success": false,
+      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
+      "timestamp": "2025-07-22T18:53:04.325005"
+    },
+    {
+      "name": "Users Count",
+      "success": false,
+      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
+      "timestamp": "2025-07-22T18:53:04.342187"
+    },
+    {
+      "name": "Test Results Count",
+      "success": false,
+      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
+      "timestamp": "2025-07-22T18:53:04.364173"
+    },
+    {
+      "name": "Users List",
+      "success": false,
+      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
+      "timestamp": "2025-07-22T18:53:04.381767"
+    },
+    {
+      "name": "Test Results List",
+      "success": false,
+      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
+      "timestamp": "2025-07-22T18:53:04.401361"
+    },
+    {
+      "name": "MongoDB Connection via Health",
+      "success": false,
+      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
+      "timestamp": "2025-07-22T18:53:04.418020"
+    },
+    {
+      "name": "Telegram Bot Status via Health",
+      "success": false,
+      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
+      "timestamp": "2025-07-22T18:53:04.434704"
+    },
+    {
+      "name": "File Existence: anna_photo.jpg",
+      "success": false,
+      "details": "File not found",
+      "timestamp": "2025-07-22T18:53:04.434986"
+    },
+    {
+      "name": "File Existence: Кето Анна Герц.pdf",
+      "success": false,
+      "details": "File not found",
+      "timestamp": "2025-07-22T18:53:04.435010"
+    },
+    {
+      "name": "404 Error Handling",
+      "success": true,
+      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
+      "timestamp": "2025-07-22T18:53:04.456838"
+    }
+  ],
+  "base_url": "https://0640a618-affb-403d-8017-1887685ee433.preview.emergentagent.com",
+  "api_url": "https://0640a618-affb-403d-8017-1887685ee433.preview.emergentagent.com/api"
+}
