@@ -1,85 +1,97 @@
 {
   "test_summary": {
-    "total_tests": 12,
-    "passed": 1,
-    "failed": 11,
-    "success_rate": 8.333333333333332,
-    "timestamp": "2025-07-22T18:53:04.457108"
+    "total_tests": 14,
+    "passed": 13,
+    "failed": 1,
+    "success_rate": 92.85714285714286,
+    "timestamp": "2025-07-22T18:56:46.132195"
   },
   "test_results": [
     {
       "name": "Root Endpoint",
       "success": false,
-      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
-      "timestamp": "2025-07-22T18:53:04.286932"
+      "details": "Status: 404, Response: {\"message\": \"Endpoint not found\"}...",
+      "timestamp": "2025-07-22T18:56:46.108457"
     },
     {
       "name": "Bot Status",
-      "success": false,
-      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
-      "timestamp": "2025-07-22T18:53:04.308610"
+      "success": true,
+      "details": "Status: 200, Response: {\"status\": \"running\", \"message\": \"Telegram бот запущен\"}...",
+      "timestamp": "2025-07-22T18:56:46.110903"
     },
     {
       "name": "Health Check",
-      "success": false,
-      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
-      "timestamp": "2025-07-22T18:53:04.325005"
+      "success": true,
+      "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
+      "timestamp": "2025-07-22T18:56:46.113769"
     },
     {
       "name": "Users Count",
-      "success": false,
-      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
-      "timestamp": "2025-07-22T18:53:04.342187"
+      "success": true,
+      "details": "Status: 200, Response: {\"total_users\": 1}...",
+      "timestamp": "2025-07-22T18:56:46.116870"
     },
     {
       "name": "Test Results Count",
-      "success": false,
-      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
-      "timestamp": "2025-07-22T18:53:04.364173"
+      "success": true,
+      "details": "Status: 200, Response: {\"total_tests\": 1}...",
+      "timestamp": "2025-07-22T18:56:46.119693"
     },
     {
       "name": "Users List",
-      "success": false,
-      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
-      "timestamp": "2025-07-22T18:53:04.381767"
+      "success": true,
+      "details": "Status: 200, Response: {\"users\": [{\"user_id\": \"5269189109\", \"created_at\": \"2025-07-22T18:54:37.607000\", \"first_name\": \"Анна\", \"is_new_user\": true, \"last_name\": null, \"new_messages_sent\": true, \"test_completed\": true, \"usern...",
+      "timestamp": "2025-07-22T18:56:46.122485"
     },
     {
       "name": "Test Results List",
-      "success": false,
-      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
-      "timestamp": "2025-07-22T18:53:04.401361"
+      "success": true,
+      "details": "Status: 200, Response: {\"test_results\": [{\"user_id\": \"5269189109\", \"test_id\": \"71404a19-30a4-446d-95b7-0f1a0a655d1d\", \"answers\": [{\"question_index\": 0, \"answer_index\": 0, \"answer_text\": \"до 30\", \"score\": 20}, {\"question_ind...",
+      "timestamp": "2025-07-22T18:56:46.125290"
     },
     {
       "name": "MongoDB Connection via Health",
-      "success": false,
-      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
-      "timestamp": "2025-07-22T18:53:04.418020"
+      "success": true,
+      "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
+      "timestamp": "2025-07-22T18:56:46.127791"
+    },
+    {
+      "name": "MongoDB Connection Status",
+      "success": true,
+      "details": "Status: connected",
+      "timestamp": "2025-07-22T18:56:46.127891"
     },
     {
       "name": "Telegram Bot Status via Health",
-      "success": false,
-      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
-      "timestamp": "2025-07-22T18:53:04.434704"
+      "success": true,
+      "details": "Status: 200, Response: {\"status\": \"healthy\", \"mongodb\": \"connected\", \"telegram_bot\": \"running\", \"message\": \"API is working properly\"}...",
+      "timestamp": "2025-07-22T18:56:46.130102"
+    },
+    {
+      "name": "Telegram Bot Status",
+      "success": true,
+      "details": "Status: running",
+      "timestamp": "2025-07-22T18:56:46.130196"
     },
     {
       "name": "File Existence: anna_photo.jpg",
-      "success": false,
-      "details": "File not found",
-      "timestamp": "2025-07-22T18:53:04.434986"
+      "success": true,
+      "details": "File exists, size: 205161 bytes",
+      "timestamp": "2025-07-22T18:56:46.130250"
     },
     {
       "name": "File Existence: Кето Анна Герц.pdf",
-      "success": false,
-      "details": "File not found",
-      "timestamp": "2025-07-22T18:53:04.435010"
+      "success": true,
+      "details": "File exists, size: 6529730 bytes",
+      "timestamp": "2025-07-22T18:56:46.130273"
     },
     {
       "name": "404 Error Handling",
       "success": true,
-      "details": "Status: 404, Response: {\"raw_response\": \"404 page not found\\n\"}...",
-      "timestamp": "2025-07-22T18:53:04.456838"
+      "details": "Status: 404, Response: {\"message\": \"Endpoint not found\"}...",
+      "timestamp": "2025-07-22T18:56:46.132079"
     }
   ],
-  "base_url": "https://0640a618-affb-403d-8017-1887685ee433.preview.emergentagent.com",
-  "api_url": "https://0640a618-affb-403d-8017-1887685ee433.preview.emergentagent.com/api"
+  "base_url": "http://localhost:8001",
+  "api_url": "http://localhost:8001/api"
 }
